@@ -1,0 +1,39 @@
+import tkinter as tk
+from tkinter import ttk
+
+# Create main window
+root = tk.Tk()
+root.title("My Website Visual")
+root.geometry("800x600")
+root.configure(bg="white")
+
+# Create a top navigation bar
+navbar = tk.Frame(root, bg="#1E90FF", height=50)
+navbar.pack(fill="x")
+
+title_label = tk.Label(navbar, text="My Awesome Site", bg="#1E90FF", fg="white", font=("Arial", 16, "bold"))
+title_label.pack(pady=10)
+
+# Create main content area
+content = tk.Frame(root, bg="white", padx=20, pady=20)
+content.pack(fill="both", expand=True)
+
+heading = tk.Label(content, text="Welcome to My Website!", font=("Arial", 20, "bold"), bg="white")
+heading.pack(pady=10)
+
+subheading = tk.Label(content, text="This is a visual mockup created with Python and Tkinter.", bg="white", font=("Arial", 12))
+subheading.pack(pady=5)
+
+# Create a sample button
+cta_button = ttk.Button(content, text="Learn More")
+cta_button.pack(pady=20)
+
+# Create footer
+footer = tk.Frame(root, bg="#F0F0F0", height=40)
+footer.pack(fill="x")
+
+footer_label = tk.Label(footer, text="© 2025 My Website | All rights reserved", bg="#F0F0F0", font=("Arial", 10))
+footer_label.pack(pady=10)
+
+# Run the app
+root.mainloop()
